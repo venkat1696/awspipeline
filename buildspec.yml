@@ -1,0 +1,15 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "pre build things can mention"
+  build:
+    commands:
+      - echo "build phase"
+      - mvn clean packge
+  post_build:
+    commands:
+      - echo "post deployment"
+artifacts:
+  files:
+    - ./targe/*
